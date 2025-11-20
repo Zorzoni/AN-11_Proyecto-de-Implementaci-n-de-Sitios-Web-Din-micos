@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap');
+
+:root {
+    --glow-color: #ff00c1;
+    --primary-color: #0a0a23;
+    --secondary-color: #1b1b32;
+    --accent-color: #00f2ff;
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hud-element {
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+#track-info {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#track-info h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--glow-color);
+}
+
+#track-info p {
+    font-size: 1.5em;
+    margin: 5px 0 20px 0;
+    color: var(--accent-color);
+}
+
+.controls {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.controls button {
+    background: rgba(27, 27, 50, 0.5);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--accent-color);
+    backdrop-filter: blur(5px);
+}
+
+.controls button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+#play-pause-btn .play-icon::before {
+    content: '▶';
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+#play-pause-btn .pause-icon::before {
+    content: '❚❚';
+}
